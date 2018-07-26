@@ -4,8 +4,10 @@ import pandas as pd
 url = 'http://www.twse.com.tw/en/exchangeReport/BWIBBU_d?response=csv&date=20180723&selectType=11'
 
 Rubber_Inc_stock = pd.read_csv(url,skiprows=[0],encoding = 'big5')
+#print(Rubber_Inc_stock)
 Rubber_Inc_stock = Rubber_Inc_stock [:12]
 x = Rubber_Inc_stock['Security Code']
+print(x)
 
 y = Rubber_Inc_stock['Dividend yield (%)']
 y1 = Rubber_Inc_stock['P/E ratio']

@@ -3,7 +3,7 @@ import time
 import json
 from threading import Timer
 import matplotlib.pyplot as plt
-import pandas as pd
+#import pandas as pd
 import pprint
 URL_upper = "http://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_"
 URL_lower = ".tw&json=1&delay=0&_="  
@@ -30,6 +30,7 @@ data_i = []
 dataTime = []
 def showPrice():
     dataTime.append(price.get_stock_price(URL_upper + str(2104) + URL_lower)[1])
+    #print(price.url)
     data_1.append(price.get_stock_price(URL_upper + str(2104) + URL_lower)[0])
     data_2.append(price.get_stock_price(URL_upper + str(2105) + URL_lower)[0])
     data_3.append(price.get_stock_price(URL_upper + str(2106) + URL_lower)[0])
